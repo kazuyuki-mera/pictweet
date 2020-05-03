@@ -1,7 +1,8 @@
 class TweetsController < ApplicationController
 
   def index
-    @tweets = Tweet.all
+    # ツイートを最新順にソート
+    @tweets = Tweet.order("created_at DESC")
   end
 
   def new
