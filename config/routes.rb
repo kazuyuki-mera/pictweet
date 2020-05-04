@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   delete 'tweets/:id'  =>  'tweets#destroy'   #ツイート削除機能
   patch  'tweets/:id'  =>  'tweets#update'    #ツイート編集機能
   get    'tweets/:id/edit'  => 'tweets#edit'  #ツイート編集画面
+  get    'tweets/:id'  =>  'tweets#show'      #ツイート詳細画面
   get    'users/:id'   =>  'users#show'       #マイページへのルーティング
 end
