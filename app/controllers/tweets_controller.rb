@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
   def index
     # ツイートを最新順にソート
-    @tweets = Tweet.order("created_at DESC")
+    @tweets = Tweet.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
